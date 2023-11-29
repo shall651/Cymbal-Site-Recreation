@@ -1,0 +1,451 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  margin-right: 0px;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: century-gothic, sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background-color: rgb(10, 10, 10);
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Header and topnav links below */
+.shipping-header {
+  background-color: #cc9f53;
+  color: white;
+  font-weight: 400;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-bars {
+  color: #cc9f53;
+}
+
+/* zildjian home logo/link  */
+.header-logo {
+  max-width: 150px;
+}
+
+.navbar {
+  height: 100px;
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 90px;
+  flex-direction: row;
+  margin-left: 8em;
+  font-size: 1.1em;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.nav-links-left {
+  margin-right: auto;
+  margin-left: 15px;
+  padding: 20px 20px;
+}
+
+.nav-links-left.show {
+  visibility: visible;
+  opacity: 1;
+  margin-left: 0px;
+  position: fixed;
+  width: auto;
+  height: auto;
+  gap: 10px;
+  padding: 20px 10px;
+  cursor: default;
+}
+
+#products-button {
+  border: none;
+  cursor: pointer;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar li, button {
+  display: inline;
+  padding: 0px 30px;
+  color: white;
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  /* color: inherit; */
+  /* border: none; */
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: inherit;
+}
+
+#menu-bars {
+  display: none;
+}
+
+#search-icon {
+  color: #cc9f53;
+}
+
+.input {
+  visibility: hidden;
+}
+
+#products-dropdown {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  position: absolute;
+  top: 150px;
+  min-width: 30%;
+  transition: 0.5s;
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#products-dropdown.show {
+  visibility: visible;
+  opacity: 1;
+  cursor: default;
+}
+
+.products-items h2, h3 {
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+}
+.products-items h2:hover, h3:hover {
+  color: #cc9f53;
+}
+
+.products-items h2, h3:hover {
+  cursor: pointer;
+}
+
+.drumSetCymbalsMenu {
+  position: relative;
+  min-width: 30%;
+  transition: 0.5s;
+  background-color: #000000;
+  color: white;
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+
+.drumSetCymbalsMenu.show {
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+  opacity: 1;
+}
+
+.drumSetMenuItems {
+  margin-left: auto;
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+
+.toggle-button {
+  position: absolute;
+  /* top: .75rem; */
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* scrolling banner css */
+.hero-text {
+  font-weight: bold;
+  font-size: 2.5em;
+  overflow: hidden;
+}
+
+.scrolling-banner {
+  display: flex;
+  min-height: 560px;
+  background-image: url("../images/2880x1260-Always-You-HP-Desktop.jpg");
+  /* added new below for parallax, delete to remove parallax*/
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-size: 100vw; */
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrolling-banner-text {
+  margin-left: 20px;
+  margin-right: 20%;
+  color: white;
+}
+
+.scrolling-banner-text .links:hover {
+  color: black;
+}
+
+.explore-box-container {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid;
+}
+
+.explore-box {
+  display: flex;
+  flex: 1 1 0px;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 150px;
+}
+.explore-box:hover {
+  color: #eeba61;
+  text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+#box1 {
+  background-image: url("../images/explore cymbals.webp");
+}
+
+#box2 {
+  background-image: url("../images/explore sticks and mallets.webp");
+}
+
+#box3 {
+  background-image: url("../images/explore apparel.webp");
+}
+
+/* //////////two product boxes styling///////// */
+.relevant-products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  min-width: 0;
+  flex-shrink: 1;
+  background-color: white;
+  gap: 90px;
+}
+
+.box-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+  width: 400px;
+}
+
+.left-box, .right-box {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  margin: 0px 20px;
+}
+
+.relevant-products h4 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.relevant-products a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.relevant-products h4:hover, a:hover, #products-button:hover {
+  color: #cc9f53;
+}
+
+.text-box-right, .text-box-left {
+  line-height: 1.6;
+}
+
+/* product links in the boxes */
+.links {
+  background-color: #cc9f53;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.dropdown {
+  background-color: red;
+}
+
+/* ------MEDIA QUERIES------ */
+@media (max-width: 1330px) {
+  .navbar li, button {
+    margin: 0px;
+    padding: 10px;
+  }
+}
+@media (max-width: 1044px) {
+  .navbar {
+    padding: 5px 23px;
+  }
+  .nav-links-left {
+    font-size: 0.8em;
+  }
+  .relevant-products {
+    flex-direction: column;
+  }
+  .left-box, .right-box {
+    min-width: auto;
+    margin: 20px 10px;
+  }
+}
+@media screen and (max-width: 875px) {
+  /* .hero-text {
+      margin-left: 0px;
+      margin-right: 0px;
+  } */
+}
+@media screen and (max-width: 822px) {
+  #menu-bars {
+    display: block;
+  }
+  .navbar {
+    height: 60px;
+    margin: 0px;
+    padding: 0px 20px;
+    width: auto;
+    justify-content: space-between;
+  }
+  .shipping-header {
+    height: 50px;
+    font-size: min(4vw, 100%);
+  }
+  #navlinksbreak {
+    display: none;
+  }
+  .nav-links-left {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+    position: absolute;
+    top: 110px;
+    transition: 0.5s;
+    left: 0px;
+  }
+  #products-dropdown.show {
+    margin-top: 20px;
+  }
+  .header-logo {
+    padding: 0px;
+    margin: 0px;
+  }
+  .scrolling-banner-text {
+    font-size: min(3vw, 10px);
+  }
+  .links {
+    font-size: min(3vw, 10px);
+    text-align: center;
+  }
+  .explore-box {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 549px) {
+  .explore-box-container {
+    flex-direction: column;
+  }
+  .explore-box {
+    padding: 60px;
+  }
+  .box-image {
+    max-width: 85%;
+    height: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
